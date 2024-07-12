@@ -15,7 +15,7 @@ if '已查詢' not in df.columns:
 df = df.iloc[:, 1:]
 
 # 設定欄位名稱
-df.columns = ['已查詢', '門號', '門尺寸 (mm)', '門型', '開向', '防火時效', '五金組別']
+df.columns = ['已查詢', '門號', '門尺寸 (mm)', '門型', '開向', '防火時效', '五金組別', '備註']
 
 # 新增「已查詢」欄位
 if '已查詢' not in df.columns:
@@ -39,6 +39,7 @@ while True:
             print(f"開向: {row['開向']}")
             print(f"防火時效: {row['防火時效']}")
             print(f"五金組別: {row['五金組別']}")
+            print(f"備註: {row['備註']}")
             # 標記已查詢
             df.at[index, '已查詢'] = '✔'
     else:
